@@ -10,11 +10,18 @@ Example:
 > `docker run busybox ls`  
 > `docker run busybox ping google.com`  
 
-run with input allowed
+**run with input allowed**
 > `docker run -it <image name> sh`
 
 Example:
 > `docker run -it redis sh`
+
+**run with port mapping**
+> `docker run -p <host port>:<container port> <image name or id>`
+
+Example:
+> `docker run -p 5000:5000 flaskapp`  
+> `docker run -p 10000:5000 flaskapp`  
 
 ## **docker ps**
 lists running containers
