@@ -72,3 +72,34 @@ running shell of the container
 exiting a container:
 - ctrl + c
 - ctrl + d
+
+## **docker build**
+builds image
+> `docker build <path to Dockerfile>`
+
+Example:  
+> `docker build .`  
+
+**With tag**
+> `docker build --tag <docker ID>/<image name>:[version/ tag] <path to Dockerfile>`
+
+or
+
+> `docker build -t <docker ID>/<image name>:[version or tag] <path to Dockerfile>`  
+
+Example:
+> `docker build -t rrka79wal/redis:1.0.0 .`
+> `docker build -t rrka79wal/redis .`
+
+Default version/ tag = latest
+
+## **docker tag**
+adds a tag to existing image  
+> `docker tag <image tag/ ID> <new image tag>`
+
+image tag = `<docker ID>/<image name>:[version or tag]`
+
+## **docker commit**
+Create a new image from a container’s changes
+> `docker commit -c 'CMD [<command>]' <container ID> `  
+
