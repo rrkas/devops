@@ -1,0 +1,10 @@
+version: '3' # version of docker compose, not of our app
+services: # service = container
+  redis-server:
+    image: redis
+  
+  node-app:
+    restart: always
+    build: .  # Dockerfile path
+    ports:
+      - '4001:8081'
